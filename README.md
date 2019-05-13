@@ -1,5 +1,26 @@
 # Quick and Dirty Linux support for Huion Kamvas GT-191
 
+## Fork changes:
+This fork is tested with Ubuntu 18.04 and works with the Huion Kamvas GT-191  V2.
+
+Installation steps:
+
+1. `uclogic-tools`:
+    1. git clone git@github.com:DIGImend/uclogic-tools.git
+    2. cd uclogic-tools/
+    3. `sudo apt install autoconf automake pkg-config`
+    4. `autoreconf -i -f && ./configure && make`
+    5. `sudo make install`
+    6. `cd ..`
+2. `python3 -m venv venv`
+3. `source venv/bin/python`
+4. `pip install -U pip setuptools wheel`
+5. `pip install evdev pyusb`
+6. `sudo apt install xserver-xorg-input-synaptics xserver-xorg-input-evdev`
+7. Add `/etc/X11/xorg.conf` as described under *Requirements*
+8. Edit the `main()` function of canvas.py use the size of your screen. This corrects the offsets of the screen. The function assumes one main screen using the tablet as an extended desktop to the right.
+9. Run it using `sudo venv/bin/python kamvas.py`
+
 ## NOTE: CURRENTLY REQUIRES WORKAROUND TO PROPERLY FUNCTION!
 **See [Issue #1](https://github.com/benthor/HuionKamvasGT191LinuxDriver/issues/1) for a description of the problem and [this post](https://github.com/benthor/HuionKamvasGT191LinuxDriver/issues/1#issuecomment-351207116) for a (temporary) workaround.**
 

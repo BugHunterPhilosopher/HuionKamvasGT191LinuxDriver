@@ -15,7 +15,7 @@ def main():
     device = load_device()
     endpoint = register_endpoint(device)
     vpen = get_pen()
-    map_tablet_coordinates(3840, 2160)
+    map_tablet_coordinates(3840, 1080)
     print('Huion Kamvas GT191 driver is now running')
 
     listen_for_events(device, endpoint, vpen)
@@ -39,7 +39,7 @@ def register_endpoint(device):
             if device.is_kernel_driver_active(interface.index):
                 device.detach_kernel_driver(interface.index)
                 usb.util.claim_interface(device, interface.index)
-                print(f'Grabbed interface {i.index}')
+                print(f'Grabbed interface {interface.index}')
 
     return device[0][(0,0)][0]
 

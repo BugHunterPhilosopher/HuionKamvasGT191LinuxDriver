@@ -13,7 +13,7 @@ Installation steps:
     5. `sudo make install`
     6. `cd ..`
 2. `python3 -m venv venv`
-3. `source venv/bin/python`
+3. `source venv/bin/activate`
 4. `pip install -U pip setuptools wheel`
 5. `pip install evdev pyusb`
 6. `sudo apt install xserver-xorg-input-synaptics xserver-xorg-input-evdev`

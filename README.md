@@ -1,7 +1,7 @@
 # Quick and Dirty Linux support for Huion Kamvas GT-191
 
 ## Fork changes:
-This fork is tested with Ubuntu 18.04 and works with the Huion Kamvas GT-191  V2.
+This fork is tested with Ubuntu 18.04 (& Pop! OS 19.10) and works with the Huion Kamvas GT-191 V2 (and V1 as well).
 
 Installation steps:
 
